@@ -1,4 +1,4 @@
-##Alternative to ROC curve, choosing predict probability of GLM directly from resulting accuracy
+##Alternative to ROC curve, choosing threshold predicted probability of GLM directly from resulting accuracy
 set.seed(618)
 testeloopacur <- data.frame(class=c(rep(0,6), rep(1,6)), variable=rnorm(12,10,1), acur=rep(NA,12))
 model <- glm(class~variable, data = testeloopacur, family = binomial(link = "logit"))
